@@ -22,9 +22,11 @@ app.set('view engine','handlebars');
 app.use(express.json());
 app.use(express.static(__dirname+'/public'))
 
+// configurar router
 app.use('/',viewsRouter);
 
 const io = new Server(server);
+// iniciamos array vacio donde recibimos los mensajes
 const messages= [];
 
 io.on('connection',socket=>{

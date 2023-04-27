@@ -31,6 +31,9 @@ socket.on('messageLogs',data=>{
     })
     log.innerHTML=messages;
 })
+
+// se manda desde el backend
+// data seria nombre de usuario
 socket.on('newUserConnected',data=>{
     if(!user) return;
     Swal.fire({
