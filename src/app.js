@@ -13,7 +13,7 @@ const viewsRouter = require ('./routes/views.router.js');
 // express
 const app = express();
 const PORT = process.env.PORT||8080;
-const server = app.listen(PORT,()=>console.log("Listening on 8080"));
+const server = app.listen(PORT,()=>console.log(`Listen on port ${PORT}`));
 
 app.engine('handlebars',handlebars.engine());
 app.set('views',__dirname+'/views');
